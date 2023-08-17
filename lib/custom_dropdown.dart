@@ -174,6 +174,8 @@ class CustomDropdownState<T> extends State<CustomDropdown>
                         _selectedItem = value;
                         collapse();
 
+                        // The error happens here
+                        // type '(String) => void' is not a subtype of type '(dynamic) => void'
                         widget.onChanged(value.key);
                       },
                     );
