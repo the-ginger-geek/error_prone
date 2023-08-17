@@ -106,16 +106,6 @@ class CustomDropdownState<T> extends State<CustomDropdown>
     );
   }
 
-  void expand({bool refreshState = true}) {
-    if (!_isDropdownOpened) {
-      _isDropdownOpened = true;
-      _controller.forward();
-      if (refreshState) {
-        setState(() {});
-      }
-    }
-  }
-
   void collapse({bool refreshState = true}) {
     if (_isDropdownOpened) {
       _isDropdownOpened = false;
